@@ -1,0 +1,269 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Nunito', sans-serif;
+}
+
+body{
+    background-color: #ffc5c5;
+}
+
+.main-content{
+    min-height: 100vh;
+    width: 80%;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.parte-izquierda{
+    grid-column: span 2;
+    height: 100%;
+    background-color: #4e0101;
+}
+.parte-derecha{
+    grid-column: span 5;
+    background-color: #fffefe;
+    height: 100%;
+}
+
+
+.contenido-partizq{
+    padding: 2rem 3rem;
+}
+.perfil{
+    width: 100%;
+    border-bottom: 1px solid #ecedee;
+}
+
+.imagen{
+    width: 100%;
+    text-align: center;
+}
+.perfil img{
+    width: 100%;
+    border-radius: 50%;
+    border: 8px solid #f4f6f7;
+    
+}
+
+.nombre{
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1.2rem 0;
+}
+
+.ocupacion{
+    font-size: 1.2rem;
+    color: #061013;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-bottom: 1rem;
+}
+
+.menu{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #f7f7f7ec;
+    padding-top: 3rem;
+}
+
+.informacion ul{
+    padding-top: 2rem;
+}
+
+.informacion ul li{
+    padding: .4rem 0;
+    display: flex;
+    align-items: center;
+    color: #718096;
+}
+.informacion ul li i{
+    padding-right: 1rem;
+    font-size: 1.2rem;
+    color: #2D9CDB;
+}
+
+
+.progress-bar{
+    width: 100%;
+    height: .4rem;
+    background-color: #2f81ed5b;
+    position: relative;
+    border-radius: 12px;
+}
+.progress{
+    height: 100%;
+    position: absolute;
+    left: 0;
+    background-color: #2D9CDB;
+    border-radius: 12px;
+}
+.js-progress{
+    width: 70%;
+}
+.ps-progress{
+    width: 90%;
+}
+.j-progress{
+    width: 85%;
+}
+.c-progress{
+    width: 40%;
+}
+.n-progress{
+    width: 63%;
+}
+.w-progress{
+    width: 78%;
+}
+
+
+.skill-title{
+    text-transform: uppercase;
+    color: #f7f7f7;
+    font-size: 1rem;
+}
+
+.contactos-refrencia{
+    padding-top: 2rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #f7f7f7;
+}
+
+.sub-para{
+    color: #ccc;
+    padding: .4rem 0;
+}
+
+.referencias li{
+    color: #ccc;
+    padding: .2rem 0;
+}
+.referencias li i{
+    padding-right: .5rem;
+    font-size: 1.2rem;
+    color: #1f88dd;
+}
+
+.menu-derecho{
+    padding: 2rem 3rem;
+}
+
+
+.titulo-derecho{
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #960c0c;
+    margin-bottom: 1.2rem;
+    position: relative;
+}
+
+.titulo-derecho::after{
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: .2rem;
+    background-color: #ccc;
+    border-radius: 12px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.para{
+    line-height: 1.6rem;
+    color: #718096;
+    font-size: 1.1rem;
+}
+
+.sect{
+    padding-bottom: 2rem;
+}
+
+.vida{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.nombrecontenido{
+    letter-spacing: 1px;
+    font-size: 1.3rem;
+    color: #002333;
+    text-transform: uppercase;
+}
+.nombrecontenido-2{
+    letter-spacing: 1px;
+    font-size: 1.3rem;
+    color: #2D9CDB;
+    text-transform: uppercase;
+}
+
+.contenido-rigth{
+    border-left: 1px solid #ccc;
+    padding-left: 2rem;
+    position: relative;
+    padding-bottom: 2rem;
+}
+
+.nombrecontenido-2::before{
+    content: "";
+    position: absolute;
+    width: .7rem;
+    height: .7rem;
+    background-color: #2D9CDB;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    left: 0;
+}
+
+/*Media Querries*/
+@media screen and (max-width:823px){
+    .titulo-derecho::after{
+        width: 40%;
+    }
+}
+@media screen and (max-width:681px){
+    .titulo-derecho::after{
+        width: 30%;
+    }
+}
+@media screen and (max-width:780px){
+    .vida{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media screen and (max-width:780px){
+    .parte-izquierda{
+        grid-column: span 3;
+    }
+    .parte-derecha{
+        grid-column: span 4;
+    }
+}
+@media screen and (max-width:1200px){
+    .main-content{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .perfil img{
+        width: 40%;
+    }
+}
+@media screen and (max-width:700px){
+    .perfil img{
+        width: 60%;
+    }
+}
+@media screen and (max-width:390px){
+    .nombre{
+        font-size: 1.5rem;
+    }
+}
